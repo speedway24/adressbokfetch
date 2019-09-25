@@ -6,7 +6,8 @@ fetch("./adressbok-1.json")
    
     for(var i = 0; i < data.length; i++){
        // var element = document.createElement("ul");
-        document.getElementById("list").innerHTML = data;
+      
     }
+    document.getElementsByClassName("list-element").innerHTML = data;
     console.log(data);
 })
