@@ -2,7 +2,7 @@ fetch("./adressbok-1.json")
 .then(function(resp){
     return resp.json();
 })
-.then(function(data){
+.then(function adressbok(data){
    
     var lista = document.createElement("ul");
 
@@ -19,3 +19,4 @@ fetch("./adressbok-1.json")
    
     console.log(data);
 })
+document.getElementById('list').appendChild(adressbok(data[0]));
