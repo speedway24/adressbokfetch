@@ -4,10 +4,18 @@ fetch("./adressbok-1.json")
 })
 .then(function(data){
    
-    for(var i = 0; i < data.length; i++){
-       // var element = document.createElement("ul");
-      
+    var lista = document.createElement("ul");
+
+    for (var i = 0; i < data.length; i++) {
+
+       
+        var listItem = document.createElement("li");
+        listItem.appendChild(document.createTextNode(data[i]));
+
+       
+        lista.appendChild(listItem);
     }
-    document.getElementsByClassName("list-element").innerHTML = data;
+    return lista;
+   
     console.log(data);
 })
